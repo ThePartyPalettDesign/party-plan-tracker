@@ -1,0 +1,1870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>30-Day Etsy Launch Plan v5</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#FAF7F2;--blush:#E8D5C4;--sage:#8FAF8F;--sage-dark:#5C7A5C;
+  --terracotta:#C4714A;--charcoal:#2C2C2C;--mid:#6B6B6B;--light:#B0A89A;
+  --white:#FFFFFF;--card-bg:#FFFDFB;--pinterest:#E60023;--etsy:#F56400;
+  --canva:#7D2AE8;--me:#2C6E8A;--you:#5C7A5C;--trend:#8B4A9E;
+}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--charcoal);min-height:100vh}
+header{background:var(--charcoal);color:var(--cream);padding:36px 28px 28px;position:relative;overflow:hidden}
+header::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;background:var(--terracotta);opacity:.18}
+header::after{content:'';position:absolute;bottom:-40px;left:40px;width:130px;height:130px;border-radius:50%;background:var(--sage);opacity:.15}
+.header-tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);font-weight:600;margin-bottom:8px}
+header h1{font-family:'Playfair Display',serif;font-size:28px;font-weight:600;line-height:1.2;margin-bottom:8px}
+header p{font-size:12px;color:var(--light);font-weight:300;max-width:560px;line-height:1.6}
+.legend{display:flex;gap:20px;padding:10px 28px;background:var(--charcoal);border-top:1px solid rgba(255,255,255,.08);flex-wrap:wrap}
+.legend-item{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--light)}
+.legend-dot{width:10px;height:10px;border-radius:3px;flex-shrink:0}
+.stats-bar{display:flex;background:var(--white);border-bottom:1px solid var(--blush)}
+.stat{flex:1;padding:12px 14px;border-right:1px solid var(--blush);text-align:center}
+.stat:last-child{border-right:none}
+.stat-num{font-family:'Playfair Display',serif;font-size:20px;color:var(--terracotta);font-weight:600}
+.stat-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--mid);margin-top:2px}
+.main{display:grid;grid-template-columns:210px 1fr;min-height:calc(100vh - 220px)}
+.sidebar{background:var(--white);border-right:1px solid var(--blush);padding:18px 0}
+.sidebar-section{padding:0 14px 14px;border-bottom:1px solid var(--blush);margin-bottom:12px}
+.sidebar-label{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--light);font-weight:600;margin-bottom:7px}
+.week-btn{display:block;width:100%;text-align:left;background:none;border:none;padding:7px 9px;border-radius:6px;font-family:'Inter',sans-serif;font-size:11.5px;color:var(--mid);cursor:pointer;transition:all .15s;margin-bottom:2px;font-weight:400;line-height:1.4}
+.week-btn:hover{background:var(--cream);color:var(--charcoal)}
+.week-btn.active{background:var(--charcoal);color:var(--cream);font-weight:500}
+.sidebar-tag{display:inline-block;background:var(--cream);border:1px solid var(--blush);border-radius:20px;padding:3px 8px;font-size:10px;color:var(--mid);margin:2px}
+.platform-row{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--mid);padding:3px 0}
+.dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.content{padding:22px 26px;max-width:920px}
+.week-panel{display:none}
+.week-panel.active{display:block}
+.week-header{margin-bottom:18px}
+.week-eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:var(--terracotta);font-weight:600;margin-bottom:4px}
+.week-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:600;margin-bottom:4px}
+.week-desc{font-size:12.5px;color:var(--mid);line-height:1.6;max-width:700px}
+.progress-wrap{background:var(--cream);border:1px solid var(--blush);border-radius:8px;padding:12px 16px;margin-bottom:18px;display:flex;align-items:center;gap:14px}
+.progress-label{font-size:11px;color:var(--mid);white-space:nowrap}
+.progress-bar-wrap{flex:1;background:var(--blush);border-radius:20px;height:6px;overflow:hidden}
+.progress-bar{height:100%;border-radius:20px;background:linear-gradient(90deg,var(--sage) 0%,var(--terracotta) 100%);transition:width .4s ease}
+.progress-pct{font-size:11px;font-weight:600;color:var(--charcoal);white-space:nowrap}
+.trend-card{background:linear-gradient(135deg,#2C1A3E 0%,#4A2060 100%);border-radius:12px;padding:20px;margin-bottom:20px;position:relative;overflow:hidden}
+.trend-card::before{content:'';position:absolute;top:-30px;right:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.05)}
+.trend-eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#C89FE0;font-weight:600;margin-bottom:5px}
+.trend-title{font-family:'Playfair Display',serif;font-size:17px;color:var(--white);margin-bottom:7px}
+.trend-desc{font-size:12px;color:#C89FE0;line-height:1.6;margin-bottom:12px}
+.trend-prompt-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#C89FE0;font-weight:600;margin-bottom:5px}
+.trend-prompt{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:12px 14px;font-size:11.5px;color:var(--white);line-height:1.7;font-style:italic}
+.trend-prompt strong{color:#E0C4F0;font-style:normal}
+.days-grid{display:flex;flex-direction:column;gap:10px}
+.day-card{background:var(--card-bg);border:1px solid var(--blush);border-radius:10px;overflow:hidden}
+.day-header{display:flex;align-items:center;padding:12px 14px;cursor:pointer;gap:10px;user-select:none}
+.day-header:hover{background:var(--cream)}
+.day-number{font-family:'Playfair Display',serif;font-size:18px;color:var(--terracotta);font-weight:600;width:28px;flex-shrink:0;line-height:1}
+.day-title-block{flex:1}
+.day-title{font-size:13px;font-weight:600;color:var(--charcoal)}
+.day-time{font-size:10px;color:var(--light);margin-top:1px}
+.day-tags{display:flex;gap:3px;flex-wrap:wrap}
+.tag{font-size:9px;padding:2px 6px;border-radius:20px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+.tag-setup{background:#FDF0E8;color:var(--terracotta)}
+.tag-design{background:#F0EEF8;color:#6B5EA8}
+.tag-pinterest{background:#FDEEF0;color:var(--pinterest)}
+.tag-etsy{background:#FEF3EC;color:var(--etsy)}
+.tag-research{background:#EEF4EE;color:var(--sage-dark)}
+.tag-content{background:#EEF0F8;color:#3B5EA8}
+.tag-amazon{background:#FFF8EC;color:#B8860B}
+.chevron{color:var(--light);font-size:10px;transition:transform .2s;flex-shrink:0}
+.day-card.open .chevron{transform:rotate(180deg)}
+.day-body{display:none;border-top:1px solid var(--blush)}
+.day-card.open .day-body{display:block}
+.dual-track{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--blush)}
+.track{padding:14px 16px;background:var(--card-bg)}
+.track-header{display:flex;align-items:center;gap:7px;margin-bottom:10px}
+.track-icon{width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0}
+.track-you .track-icon{background:#EEF4EE;color:var(--sage-dark)}
+.track-me .track-icon{background:#EEF4F8;color:var(--me)}
+.track-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;font-weight:700}
+.track-you .track-label{color:var(--sage-dark)}
+.track-me .track-label{color:var(--me)}
+.task-list{list-style:none}
+.task-list li{display:flex;align-items:flex-start;gap:8px;font-size:12px;color:var(--charcoal);line-height:1.6;margin-bottom:7px;cursor:pointer}
+.task-list li .check{width:14px;height:14px;border:1.5px solid var(--blush);border-radius:3px;flex-shrink:0;margin-top:2px;transition:all .15s;display:flex;align-items:center;justify-content:center;font-size:8px;color:transparent}
+.task-list li.done .check{background:var(--sage);border-color:var(--sage);color:white}
+.task-list li.done span{text-decoration:line-through;color:var(--light)}
+.prompt-box{background:linear-gradient(135deg,#F5EEF8,#EDE4F5);border:1px solid #C89FE0;border-radius:8px;padding:10px 12px;margin-top:10px}
+.prompt-box-label{font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--trend);font-weight:700;margin-bottom:4px}
+.prompt-box p{font-size:11.5px;color:#4A2060;line-height:1.65;font-style:italic}
+.prompt-box strong{font-style:normal;color:#2C1A3E}
+.tip-box{margin-top:10px;background:var(--cream);border-left:3px solid var(--sage);padding:9px 12px;border-radius:0 6px 6px 0;font-size:12px;color:var(--mid);line-height:1.6}
+.tip-box strong{color:var(--charcoal);font-weight:600}
+.milestone-box{margin-top:10px;background:var(--charcoal);color:var(--cream);padding:12px 14px;border-radius:8px;font-size:12px;line-height:1.6}
+.milestone-box strong{color:var(--sage)}
+.ref-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.ref-card{background:var(--card-bg);border:1px solid var(--blush);border-radius:10px;padding:14px}
+.ref-cat{font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:var(--terracotta);font-weight:600;margin-bottom:4px}
+.ref-name{font-size:13px;font-weight:600;margin-bottom:4px}
+.ref-desc{font-size:11.5px;color:var(--mid);line-height:1.5}
+.ref-note{font-size:11px;color:var(--sage-dark);margin-top:5px;font-weight:500}
+.strategy-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:14px}
+.strat-card{background:var(--card-bg);border:1px solid var(--blush);border-radius:10px;padding:13px}
+.strat-icon{font-size:18px;margin-bottom:6px}
+.strat-title{font-size:12px;font-weight:600;margin-bottom:3px}
+.strat-body{font-size:11.5px;color:var(--mid);line-height:1.5}
+.section-title{font-family:'Playfair Display',serif;font-size:18px;margin-bottom:4px;margin-top:22px}
+.section-sub{font-size:12px;color:var(--mid);margin-bottom:12px}
+table{width:100%;border-collapse:collapse;font-size:11.5px;margin-top:12px}
+th{background:var(--charcoal);color:var(--cream);padding:8px 11px;text-align:left;font-weight:500;font-size:10px;letter-spacing:.05em}
+td{padding:8px 11px;border-bottom:1px solid var(--blush);color:var(--charcoal);vertical-align:top;line-height:1.5}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:var(--cream)}
+@media(max-width:700px){.main{grid-template-columns:1fr}.dual-track{grid-template-columns:1fr}.ref-grid{grid-template-columns:1fr}.strategy-grid{grid-template-columns:1fr}.stats-bar{flex-wrap:wrap}}
+.findings-panel{background:#F5FAF5;border:1px solid #C5DEC5;border-radius:10px;padding:16px 18px;margin:14px 16px}
+.findings-header{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#5C7A5C;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.findings-theme{margin-bottom:14px}
+.findings-theme-name{font-size:12px;font-weight:700;color:#2C2C2C;margin-bottom:5px}
+.findings-list{list-style:none;padding:0;margin:0}
+.findings-list li{font-size:11.5px;color:#4A4A4A;line-height:1.65;padding:2px 0 2px 16px;position:relative;margin-bottom:3px}
+.findings-list li::before{content:'→';position:absolute;left:0;color:#8FAF8F;font-weight:700}
+.findings-list li strong{color:#2C2C2C}
+.findings-files{margin-top:12px;padding-top:12px;border-top:1px solid #C5DEC5}
+details.kw-detail{border:1px solid #C5DEC5;border-radius:6px;margin-top:8px;overflow:hidden}
+details.kw-detail summary{background:#EEF4EE;padding:8px 12px;font-size:11px;font-weight:600;color:#5C7A5C;cursor:pointer;list-style:none;display:flex;align-items:center;gap:6px;user-select:none}
+details.kw-detail summary::-webkit-details-marker{display:none}
+details.kw-detail summary::before{content:'▸  ';font-size:10px}
+details.kw-detail[open] summary::before{content:'▾  ';font-size:10px}
+details.kw-detail .kw-content{padding:10px 12px;font-size:11px;color:#4A4A4A;line-height:1.9}
+.kw-tag{display:inline-block;background:#FAF7F2;border:1px solid #E8D5C4;border-radius:20px;padding:3px 9px;font-size:10px;color:#6B6B6B;margin:2px 3px}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-tag">Etsy + Pinterest Launch Blueprint · v5 · Dual-Track + Trend Pulse</div>
+  <h1>Your 30-Day Plan — Final Version</h1>
+  <p>Every evening splits into two parallel tracks. Your track is hands-on platform work only you can do. My track is research, copy, briefs, and analysis running simultaneously. A Trend Pulse prompt sits at the start of every week so you are always designing ahead of the trend, not chasing it.</p>
+</header>
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:var(--sage)"></div>Your track — hands-on work</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--me)"></div>My track — research, copy, briefs</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--trend)"></div>Trend Pulse — weekly research prompt</div>
+</div>
+<div class="stats-bar">
+  <div class="stat"><div class="stat-num">30</div><div class="stat-label">Days</div></div>
+  <div class="stat"><div class="stat-num">3</div><div class="stat-label">Suites Live</div></div>
+  <div class="stat"><div class="stat-num">3</div><div class="stat-label">Month 2 Briefs Ready</div></div>
+  <div class="stat"><div class="stat-num">2x</div><div class="stat-label">Output Per Session</div></div>
+  <div class="stat"><div class="stat-num">~$0</div><div class="stat-label">Startup Cost</div></div>
+</div>
+<div class="main">
+  <div class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-label">Weeks</div>
+      <button class="week-btn active" onclick="showWeek('w1',this)">Week 1 — Setup + Research</button>
+      <button class="week-btn" onclick="showWeek('w2',this)">Week 2 — Golf Suite Build</button>
+      <button class="week-btn" onclick="showWeek('w3',this)">Week 3 — List + Race Cars</button>
+      <button class="week-btn" onclick="showWeek('w4',this)">Week 4 — Western + Systems</button>
+      <button class="week-btn" onclick="showWeek('prompts',this)">Trend Pulse Library</button>
+      <button class="week-btn" onclick="showWeek('themes',this)">Theme Catalog</button>
+      <button class="week-btn" onclick="showWeek('income',this)">Income + Timeline</button>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Month 1 Suites</div>
+      <span class="sidebar-tag">Golf "Hole in One"</span>
+      <span class="sidebar-tag">Race Cars "Two Fast"</span>
+      <span class="sidebar-tag">Western "How The West Was One"</span>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Month 2–3 Suites</div>
+      <span class="sidebar-tag">Dinosaurs (botanical)</span>
+      <span class="sidebar-tag">Space (editorial)</span>
+      <span class="sidebar-tag">Camping / Outdoors</span>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Platforms</div>
+      <div class="platform-row"><span class="dot" style="background:var(--etsy)"></span>Etsy digital downloads</div>
+      <div class="platform-row"><span class="dot" style="background:var(--pinterest)"></span>Pinterest traffic</div>
+      <div class="platform-row"><span class="dot" style="background:var(--canva)"></span>Canva AI design</div>
+      <div class="platform-row"><span class="dot" style="background:#B8860B"></span>Amazon affiliate</div>
+    </div>
+    <div style="padding:0 14px">
+      <div class="sidebar-label">How dual-track works</div>
+      <div style="font-size:11px;color:var(--mid);line-height:1.7">Open each day card. Send me my prompt first. Work your track while I work mine. Pick up my output before you close for the night.</div>
+    </div>
+  </div>
+  <div class="content">
+    <!-- WEEK 1 -->
+    <div class="week-panel active" id="w1">
+      <div class="week-header">
+        <div class="week-eyebrow">Week 1 · Days 1–7</div>
+        <div class="week-title">Setup, Research & Your First Design Brief</div>
+        <div class="week-desc">Configure all three platforms, run competitive research, and walk away with complete briefs for all three launch suites before you open Canva once. My track delivers research and copy while you handle the hands-on setup.</div>
+      </div>
+      <div class="progress-wrap">
+        <span class="progress-label">Week 1 progress</span>
+        <div class="progress-bar-wrap"><div class="progress-bar" id="bar-w1" style="width:0%"></div></div>
+        <span class="progress-pct" id="pct-w1">0%</span>
+      </div>
+      <div class="trend-card">
+        <div class="trend-eyebrow">Trend Pulse · Week 1 · Send on Day 1</div>
+        <div class="trend-title">Baseline Competitive Scan — All Three Launch Themes</div>
+        <div class="trend-desc">Send this before you start anything else on Day 1. I will have the full report ready by Day 3 so it informs your brief writing on Days 5–6.</div>
+        <div class="trend-prompt-label">Copy and send this to me</div>
+        <div class="trend-prompt">"Run a competitive scan across Golf birthday, Race Cars, and Western birthday party printables on Etsy. For each theme: how many listings exist, what do the top 5 sellers by review count look like, what are their prices, what does the design quality look like, and what specific gaps exist that an elevated aesthetic suite could fill. Also check Pinterest for each theme — what do the highest-saved pins look like versus what is actually available to buy on Etsy right now? I want a clear gap analysis I can use to differentiate my designs before I build anything."</div>
+      </div>
+      <div class="days-grid">
+
+        <div class="day-card" id="d1">
+          <div class="day-header" onclick="toggleDay('d1')">
+            <div class="day-number">1</div>
+            <div class="day-title-block"><div class="day-title">Etsy + Canva Account Setup</div><div class="day-time">2 hrs · both tracks running simultaneously</div></div>
+            <div class="day-tags"><span class="tag tag-setup">Setup</span><span class="tag tag-etsy">Etsy</span><span class="tag tag-design">Canva</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Send me the Week 1 Trend Pulse prompt above before doing anything else</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Open Etsy Shop Manager. Confirm shop name, upload logo (create in Canva first — search "Etsy shop logo minimal" template)</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Write your one-line shop announcement: "Aesthetic party printables for moms who want beautiful, not basic"</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Connect bank account. Set digital download policies: no refunds, personal use only</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Open Canva Brand Kit — add brand colors, set display and body fonts, upload logo</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Create folder structure in Canva: Party Suites > Golf, Race Cars, Western</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li class="done" onclick="toggleTask(this)"><span class="check">✓</span><span>Running your Week 1 Trend Pulse — full competitive scan across all three launch themes</span></li>
+                  <li class="done" onclick="toggleTask(this)"><span class="check">✓</span><span>Building your gap analysis: what exists on Etsy, what Pinterest buyers want, where the design quality is weakest</span></li>
+                  <li class="done" onclick="toggleTask(this)"><span class="check">✓</span><span>Drafting 5 shop name options if you want alternatives before you finalize</span></li>
+                  <li class="done" onclick="toggleTask(this)"><span class="check">✓</span><span>Compiling master Etsy keyword lists for all three launch themes — 13 tags each, ready for when listings go live</span></li>
+                </ul>
+                <div class="prompt-box">
+                  <div class="prompt-box-label">Pick up my output tonight</div>
+                  <p>Ask me: <strong>"What did the competitive scan find? Give me the gap analysis for Golf, Race Cars, and Western — and any shop name alternatives."</strong></p>
+                </div>
+              </div>
+            </div>
+            <div class="findings-panel">
+              <div class="findings-header">📋 Trend Pulse Findings — Day 1 · Completed by Claude</div>
+
+              <div class="findings-theme">
+                <div class="findings-theme-name">⛳ Golf "Hole in One" — Gap Analysis</div>
+                <ul class="findings-list">
+                  <li>Top food tent listing has 43k+ reviews at $2.97 — massive buyer demand but a very low price floor for individual items</li>
+                  <li>Dominant aesthetic: cartoon golfers, bright lime green, standard clip art — no sage/cream/gold palette exists</li>
+                  <li>Watercolor options exist but use standard green, not your muted palette — zero direct competition at your aesthetic level</li>
+                  <li>Bundle at $20 with 13k reviews shows buyers pay for convenience — your $12.99 full suite is very competitive</li>
+                  <li><strong>Gap verdict: High search volume, low design bar, no direct competitor at your level.</strong></li>
+                </ul>
+              </div>
+
+              <div class="findings-theme">
+                <div class="findings-theme-name">🏎️ Race Cars "Two Fast" — Gap Analysis</div>
+                <ul class="findings-list">
+                  <li>Dominant color scheme: bright primary colors — red, blue, yellow, black-white checkered. Muted terracotta/cream palette essentially absent</li>
+                  <li>"Vintage race car" exists as a search term but actual designs still trend bright and graphic, not muted and editorial</li>
+                  <li>Market flooded with individual templates at $3–7, no full elevated suite exists at any price</li>
+                  <li>Vintage race car aesthetic trending on Pinterest and TikTok but hasn't converted to Etsy printable supply yet — that gap is the window</li>
+                  <li><strong>Gap verdict: Massive demand, zero competition at your aesthetic level. Likely fastest first-sale listing.</strong></li>
+                </ul>
+              </div>
+
+              <div class="findings-theme">
+                <div class="findings-theme-name">🤠 Western "How The West Was One" — Gap Analysis</div>
+                <ul class="findings-list">
+                  <li>1,000+ listings but top sellers are generic clip-art cowboy style — bucking broncos, cacti, stock imagery throughout</li>
+                  <li>#1 bundle has 13k+ reviews at generic design quality — confirms enormous search volume for the phrase</li>
+                  <li>Pinterest inspiration imagery is miles ahead of what's available to buy — styled earthy editorial flat lays vs. clip art cowboys</li>
+                  <li>Cultural moment still active: modern western revival (Beyoncé era, western fashion) has not peaked — Etsy supply far behind</li>
+                  <li><strong>Gap verdict: Highest search volume of all three themes, weakest competition, active cultural tailwind. Anchor listing.</strong></li>
+                </ul>
+              </div>
+
+              <div class="findings-theme">
+                <div class="findings-theme-name">📈 Broader Market Context</div>
+                <ul class="findings-list">
+                  <li>Toy Story 5 (June 2026) is #1 trending kids party theme — licensed, avoid</li>
+                  <li>Space/Astronaut ranks #5 in trending 2026 themes with no licensing risk — Month 2 brief timing is well-placed</li>
+                  <li>World Cup 2026 soccer peaking now — potential fast-follow trend drop for a weekend build</li>
+                  <li>Etsy 2026 dominant aesthetics: "old money romance" and "MIDImalism" — both align with your elevated, minimal direction</li>
+                </ul>
+              </div>
+
+              <div class="findings-files">
+                <details class="kw-detail">
+                  <summary>⛳ Golf "Hole in One" — 13 Etsy Tags (click to expand)</summary>
+                  <div class="kw-content">
+                    <span class="kw-tag">golf birthday party printables</span><span class="kw-tag">hole in one birthday party</span><span class="kw-tag">golf 1st birthday invitation</span><span class="kw-tag">golf party digital download</span><span class="kw-tag">boy birthday party decor</span><span class="kw-tag">editable golf party printable</span><span class="kw-tag">par-tee birthday printable</span><span class="kw-tag">golf birthday invitation boy</span><span class="kw-tag">hole in one 1st 2nd 3rd birthday</span><span class="kw-tag">watercolor golf printable</span><span class="kw-tag">golf party food tent cards</span><span class="kw-tag">golf theme instant download</span><span class="kw-tag">golf birthday decor bundle</span>
+                  </div>
+                </details>
+                <details class="kw-detail">
+                  <summary>🏎️ Race Cars "Two Fast" — 13 Etsy Tags (click to expand)</summary>
+                  <div class="kw-content">
+                    <span class="kw-tag">race car birthday printables</span><span class="kw-tag">two fast birthday party</span><span class="kw-tag">race car party digital download</span><span class="kw-tag">boy 2nd birthday decorations</span><span class="kw-tag">vintage race car birthday</span><span class="kw-tag">editable race car party</span><span class="kw-tag">two fast 2nd birthday boy</span><span class="kw-tag">retro race car birthday party</span><span class="kw-tag">racing party instant download</span><span class="kw-tag">checkered flag birthday decor</span><span class="kw-tag">race car food tent cards</span><span class="kw-tag">race car invitation printable</span><span class="kw-tag">race car 1st birthday boy</span>
+                  </div>
+                </details>
+                <details class="kw-detail">
+                  <summary>🤠 Western "How The West Was One" — 13 Etsy Tags (click to expand)</summary>
+                  <div class="kw-content">
+                    <span class="kw-tag">western birthday party printables</span><span class="kw-tag">how the west was one birthday</span><span class="kw-tag">cowboy birthday party digital</span><span class="kw-tag">western party invitation boy</span><span class="kw-tag">cowboy first birthday printable</span><span class="kw-tag">editable western party decor</span><span class="kw-tag">wild west birthday printable</span><span class="kw-tag">western 1st birthday party boy</span><span class="kw-tag">cowboy birthday decor instant download</span><span class="kw-tag">western food tent cards</span><span class="kw-tag">boho western birthday party</span><span class="kw-tag">cowboy theme birthday digital</span><span class="kw-tag">how the west was one decor</span>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card" id="d2">
+          <div class="day-header" onclick="toggleDay('d2')">
+            <div class="day-number">2</div>
+            <div class="day-title-block"><div class="day-title">Pinterest Business Setup</div><div class="day-time">2 hrs · both tracks</div></div>
+            <div class="day-tags"><span class="tag tag-setup">Setup</span><span class="tag tag-pinterest">Pinterest</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Confirm Pinterest is set to Business account. Settings > Account > Account type</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Claim your Etsy shop on Pinterest: Settings > Claim > enter your Etsy shop URL. Do this before pinning anything — it gives your pins a verified badge and higher reach</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Create 6 boards: "Boy Birthday Party Ideas," "Golf Birthday Party," "Race Car Birthday," "Western Birthday Party," "Party Printables," "Birthday Party Inspo for Moms"</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Seed each board with 10–15 repinned non-competitor pins — styled party photos, color palette images, table setting inspiration</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Confirm Pinterest analytics tag is firing in your account settings</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing keyword-rich board descriptions for all 6 boards — ready to copy-paste directly in</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing your Pinterest profile bio with maximum keyword density for your niche</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Building master Pinterest keyword list — top 30 search phrases across your three themes from autocomplete data</span></li>
+                </ul>
+                <div class="prompt-box">
+                  <div class="prompt-box-label">Pick up my output tonight</div>
+                  <p>Ask me: <strong>"Give me the 6 board descriptions, profile bio, and master Pinterest keyword list — ready to copy in."</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card" id="d3">
+          <div class="day-header" onclick="toggleDay('d3')">
+            <div class="day-number">3</div>
+            <div class="day-title-block"><div class="day-title">Amazon Affiliate — First 5 Pins Live</div><div class="day-time">1.5 hrs · both tracks</div></div>
+            <div class="day-tags"><span class="tag tag-amazon">Amazon</span><span class="tag tag-pinterest">Pinterest</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Log into Amazon Associates. Search party supplies across your three themes — golf tableware, checkered flag race car supplies, western bandana party sets</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Generate 10 affiliate links. Save in Google Sheet: Product, Link, Category, Commission Rate</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>In Canva, create 5 Pinterest pins using the affiliate product images — 1000x1500px vertical, "Shop the look" text overlay using the captions I write</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Schedule all 5 pins — 1 per day starting tomorrow. Your Pinterest account starts building traction while your Etsy designs are in progress</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing 10 pin captions with keyword-rich descriptions and hashtags — one per affiliate product, ready to paste in</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Identifying the 5 highest-commission Amazon party supply categories relevant to your three themes</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Completing and delivering the full competitive scan report from Day 1</span></li>
+                </ul>
+                <div class="prompt-box">
+                  <div class="prompt-box-label">Pick up my output tonight</div>
+                  <p>Ask me: <strong>"Give me 10 Amazon affiliate pin captions across Golf, Race Cars, and Western party supplies — and share the full competitive scan report."</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card" id="d4">
+          <div class="day-header" onclick="toggleDay('d4')">
+            <div class="day-number">4</div>
+            <div class="day-title-block"><div class="day-title">Etsy SEO Research — Keywords + Tags</div><div class="day-time">2 hrs · both tracks</div></div>
+            <div class="day-tags"><span class="tag tag-research">Research</span><span class="tag tag-etsy">Etsy</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Install the free Erank Chrome extension — shows search volume and competition level for any Etsy keyword</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>In Etsy search, type each of your three themes and screenshot every autocomplete suggestion</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Click into the top 3 sellers per theme by review count. Read their 1–3 star reviews — buyer complaints are your product improvement list</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Note which listing photos stop you mid-scroll versus which feel generic. This shapes your mockup strategy</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Building complete 13-tag lists for all three launch suites — ready to paste directly into Etsy listing tag fields</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing keyword-optimized title templates for each suite — 140 character limit, primary keywords front-loaded</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Summarizing the most common buyer complaints per theme so you can solve them before they happen in your suites</span></li>
+                </ul>
+                <div class="prompt-box">
+                  <div class="prompt-box-label">Pick up my output tonight</div>
+                  <p>Ask me: <strong>"Give me the 13 Etsy tags and listing title for Golf, Race Cars, and Western — plus the top buyer complaints in each category."</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card" id="d5">
+          <div class="day-header" onclick="toggleDay('d5')">
+            <div class="day-number">5</div>
+            <div class="day-title-block"><div class="day-title">Golf Suite Design Brief</div><div class="day-time">2 hrs · both tracks</div></div>
+            <div class="day-tags"><span class="tag tag-design">Design</span><span class="tag tag-research">Research</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Open a Google Doc: "Golf Birthday Suite — Design Brief." Write your target customer in your own words — who she is, what she wants, what she hates about what is currently on Etsy</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Test Canva Dream Lab: type "watercolor golf flag illustration, sage green and cream, minimal, children's party, white background" — generate 5 versions, save what resonates</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Paste in the design brief I deliver tonight and add your own notes on top. This is the document you design from next week</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing the complete Golf Suite design brief: hex palette, font pairing, mood description, illustration style, full asset list with dimensions</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing 8 Dream Lab prompts engineered to produce the specific aesthetic — golf, elevated, mom-approved</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing all food tent golf pun names: "The 19th Hole," "Hole in One Snacks," "Par-Tee Treats," "Birdie Bites," "Caddy Snacks," "Chip Shot Chips," "Eagle Eats," "Bogey Bites"</span></li>
+                </ul>
+                <div class="prompt-box">
+                  <div class="prompt-box-label">Pick up my output tonight</div>
+                  <p>Ask me: <strong>"Give me the complete Golf suite design brief — palette, fonts, asset list with dimensions, all 8 Dream Lab prompts, and the food tent pun names."</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card" id="d6">
+          <div class="day-header" onclick="toggleDay('d6')">
+            <div class="day-number">6</div>
+            <div class="day-title-block"><div class="day-title">Race Cars + Western Briefs</div><div class="day-time">2 hrs · both tracks</div></div>
+            <div class="day-tags"><span class="tag tag-design">Design</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Test Race Cars in Dream Lab: "vintage race car illustration, muted terracotta and cream, retro poster style, children's birthday party, white background, no text"</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Test Western in Dream Lab: "watercolor cowboy hat and lasso, warm tan and rust, modern elevated western aesthetic, children's birthday party, white background"</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Save the best results from each to their Canva folders. Note which prompts produced the strongest images — you'll iterate from these next week</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing complete Race Cars brief: palette, fonts, 8 Dream Lab prompts, food tent puns ("Pit Stop Pizza," "Checkered Flag Chips," "Fuel Up Franks," "Victory Lap Veggies," "Pole Position Popcorn," "Lap One Lemonade," "Tire Track Treats," "Finish Line Fries")</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing complete Western brief: palette, fonts, 8 Dream Lab prompts, food tent puns ("Roundup Rolls," "Lasso Lemonade," "Cowpoke Cookies," "Saddle Up Snacks," "Wrangler Wings," "Frontier Fruit," "Bandana Bites," "Sheriff's Sweets")</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing all invitation placeholder wording for all three suites — the editable text buyers see when they open a template</span></li>
+                </ul>
+                <div class="prompt-box">
+                  <div class="prompt-box-label">Pick up my output tonight</div>
+                  <p>Ask me: <strong>"Give me the complete Race Cars and Western design briefs — plus all invitation placeholder wording for all three suites."</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card" id="d7">
+          <div class="day-header" onclick="toggleDay('d7')">
+            <div class="day-number">7</div>
+            <div class="day-title-block"><div class="day-title">Brief Review + Listing Copy</div><div class="day-time">1.5 hrs · both tracks</div></div>
+            <div class="day-tags"><span class="tag tag-research">Research</span><span class="tag tag-design">Design</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Review all three briefs. Do the palettes feel right? Regenerate any Dream Lab images that feel off</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Confirm your Golf Dream Lab image library has a strong hero illustration and 3–4 supporting elements — enough to build a full suite</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Check that your 5 Amazon affiliate pins are scheduled and live on Pinterest</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing the complete Etsy listing descriptions for all three suites — benefit-led, 200–300 words each, formatted and ready to paste in when each goes live</span></li>
+                </ul>
+                <div class="prompt-box">
+                  <div class="prompt-box-label">Pick up my output tonight</div>
+                  <p>Ask me: <strong>"Write the full Etsy listing descriptions for Golf, Race Cars, and Western — 200–300 words each, benefit-led, formatted for an Etsy product page."</strong></p>
+                </div>
+              </div>
+            </div>
+            <div class="milestone-box"><strong>Week 1 milestone:</strong> All platforms configured. Three design briefs complete. Etsy listing copy written. Keyword tags ready. Amazon affiliate pins live on Pinterest. <strong>You walk into Week 2 with nothing left to plan — only things to build.</strong></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- WEEK 2 -->
+    <div class="week-panel" id="w2">
+      <div class="week-header">
+        <div class="week-eyebrow">Week 2 · Days 8–14</div>
+        <div class="week-title">Build the Golf "Hole in One" Suite</div>
+        <div class="week-desc">Every evening this week is focused Canva design work. You follow the brief from Day 7. My track handles all the copy, mockup strategy, and Month 2 prep so you are never waiting on anything.</div>
+      </div>
+      <div class="progress-wrap">
+        <span class="progress-label">Week 2 progress</span>
+        <div class="progress-bar-wrap"><div class="progress-bar" id="bar-w2" style="width:0%"></div></div>
+        <span class="progress-pct" id="pct-w2">0%</span>
+      </div>
+      <div class="trend-card">
+        <div class="trend-eyebrow">Trend Pulse · Week 2 · Send on Day 8</div>
+        <div class="trend-title">Cultural Moments + Seasonal Opportunities — 60 to 90 Days Out</div>
+        <div class="trend-desc">Send this at the start of Day 8 while you start designing. Report lands by Day 10 so you can use it to plan Month 2 themes before you even finish Month 1.</div>
+        <div class="trend-prompt-label">Copy and send this to me on Day 8</div>
+        <div class="trend-prompt">"Look ahead 60–90 days from today and identify any cultural moments, seasons, pop culture events, or viral trends that will create a spike in party printable searches on Etsy or Pinterest. For each opportunity: what is the moment, when does search volume peak, what party theme does it create demand for, is there any licensing risk, and what does the current Etsy supply look like? I want to know which opportunities I should start designing for now, before the market catches up. Prioritize things with no licensing risk and a clear design quality gap."</div>
+      </div>
+      <div class="days-grid">
+
+        <div class="day-card" id="d8">
+          <div class="day-header" onclick="toggleDay('d8')">
+            <div class="day-number">8</div>
+            <div class="day-title-block"><div class="day-title">AI Illustrations + Invitation Build</div><div class="day-time">2.5 hrs · both tracks</div></div>
+            <div class="day-tags"><span class="tag tag-design">Design</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Send me the Week 2 Trend Pulse prompt before opening Canva</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Run all 8 Golf Dream Lab prompts. Generate 3–4 variations of each. Save every image you might use to your Golf Suite folder</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Select your hero illustration — the one image that anchors every piece of the suite</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Build invitation at 1500x2100px. Apply brief palette and fonts. Every text element in an editable Canva text box — never embedded inside an image</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Create a second invitation version with a photo circle option for parents who want to include a child's photo</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Running the Week 2 Trend Pulse — cultural moment and seasonal opportunity scan</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing the How to Edit instruction card copy — step-by-step Canva editing guide for buyers that eliminates most support messages</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing all placeholder wording for invitation text fields — what buyers see when they open the template</span></li>
+                </ul>
+                <div class="prompt-box">
+                  <div class="prompt-box-label">Pick up my output tonight</div>
+                  <p>Ask me: <strong>"Give me the Golf invitation placeholder wording and the How to Edit instruction card copy."</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card" id="d9">
+          <div class="day-header" onclick="toggleDay('d9')">
+            <div class="day-number">9</div>
+            <div class="day-title-block"><div class="day-title">Thank You Card + Welcome Sign</div><div class="day-time">2 hrs · both tracks</div></div>
+            <div class="day-tags"><span class="tag tag-design">Design</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Design Thank You Card at 2400x1800px. Front: illustration + "Thank You" in display font. Back: editable message with name and age fields</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Design Welcome Sign at 2400x3000px. "Welcome to [Name]'s Golf Party" with hero illustration centered and large</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Cohesion check: do both pieces feel unmistakably part of the same suite? Same fonts, same palette, same illustration style throughout</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Save both as Canva template links and paste into your brief Google Doc</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing 3 thank you card wording options at different warmth levels — you pick the tone that fits your brand voice</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Delivering the Week 2 Trend Pulse findings — what cultural moments and seasonal opportunities are coming in 60–90 days</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Starting the Dinosaurs suite brief for Month 2 — palette, fonts, Dream Lab prompts, food tent puns</span></li>
+                </ul>
+                <div class="prompt-box">
+                  <div class="prompt-box-label">Pick up my output tonight</div>
+                  <p>Ask me: <strong>"Give me 3 thank you card wording options for Golf, and share what the Week 2 Trend Pulse found about upcoming opportunities."</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card" id="d10">
+          <div class="day-header" onclick="toggleDay('d10')">
+            <div class="day-number">10</div>
+            <div class="day-title-block"><div class="day-title">Food Tents + Table Numbers + Cupcake Toppers</div><div class="day-time">2 hrs · both tracks</div></div>
+            <div class="day-tags"><span class="tag tag-design">Design</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Design 8 Food Tent Cards at 1200x1800px using the golf pun names from my brief. Include blank editable versions alongside the pre-written ones</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Design Table Numbers 1–10 — number large, small golf flag illustration, clean and minimal</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Design 12 Cupcake Toppers at 600x600px — mix of age number toppers, golf flag illustration, and "Par-Tee" text versions</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing the Golf activity placemat content: word search word list (25 golf words), connect-the-dots instructions, any text labels needed</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Researching what Pinterest pin formats are driving the most outbound clicks for party printable Etsy shops right now</span></li>
+                </ul>
+                <div class="prompt-box">
+                  <div class="prompt-box-label">Pick up my output tonight</div>
+                  <p>Ask me: <strong>"Give me the Golf placemat content — word search list, activity labels — and tell me what pin formats are converting best for party printable shops on Pinterest right now."</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card" id="d11">
+          <div class="day-header" onclick="toggleDay('d11')">
+            <div class="day-number">11</div>
+            <div class="day-title-block"><div class="day-title">Favor Tags + Water Labels + Banner Letters</div><div class="day-time">2 hrs · both tracks</div></div>
+            <div class="day-tags"><span class="tag tag-design">Design</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Design Favor Bag Tags at 600x1050px. "Thanks for coming to [Name]'s Par-Tee!" Two shapes: rectangle and circle punch tag</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Design Water Bottle Labels at 2100x816px — name, age, small golf illustration. All text in editable fields</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Design Banner Letters — full alphabet on pennant flag shapes in suite palette so buyers can spell any name</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Save all as Canva template links and add to your delivery document</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing all favor tag and water label wording variants for the Golf suite</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Completing the Space suite brief (Month 2 suite 2) — palette, fonts, Dream Lab prompts, food tent names ("Cosmic Chips," "Astronaut Eats," "Galaxy Gummies," etc.)</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card" id="d12">
+          <div class="day-header" onclick="toggleDay('d12')">
+            <div class="day-number">12</div>
+            <div class="day-title-block"><div class="day-title">Activity Placemat + Instruction Card + Mockups Start</div><div class="day-time">2.5 hrs · both tracks</div></div>
+            <div class="day-tags"><span class="tag tag-design">Design</span><span class="tag tag-etsy">Etsy</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Design Activity Placemat at 3300x2550px — coloring section with golf illustration, word search using my word list, connect-the-dots, tic tac toe. This is a genuine differentiator competitors rarely include</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Design How to Edit instruction card using the copy I wrote on Day 8</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Begin mockup images: search "party mockup" frames in Canva and drop your designs in. Target 8–10 total scenes</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing your mockup image strategy — which 8 scenes to create, which should be the hero listing photo, and what props to include in each mockup for each suite</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Completing the Camping/Outdoors suite brief (Month 2 suite 3)</span></li>
+                </ul>
+                <div class="prompt-box">
+                  <div class="prompt-box-label">Pick up my output tonight</div>
+                  <p>Ask me: <strong>"Give me the mockup image strategy for the Golf suite — which 8 scenes, what the hero photo should look like, what props to use."</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card" id="d13">
+          <div class="day-header" onclick="toggleDay('d13')">
+            <div class="day-number">13</div>
+            <div class="day-title-block"><div class="day-title">Suite Polish + Delivery File Assembly</div><div class="day-time">2 hrs · both tracks</div></div>
+            <div class="day-tags"><span class="tag tag-design">Design</span><span class="tag tag-etsy">Etsy</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Full cohesion review — does every piece feel unmistakably part of the same suite? Fix anything off-palette or off-brand</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Finish all 8–10 mockup images. Your hero photo must be a styled table scene showing everything laid out together</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Assemble delivery PDF — all Canva template links, the instruction card, and a warm review request note at the end</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Quality check: click every template link, confirm it opens in Canva, confirm every text field is editable</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing the delivery PDF copy — the full message buyers receive after purchase, including the review request that feels genuine not automated</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Finalizing the complete Golf listing copy: title, description, all 13 tags — polished and ready to paste directly into Etsy</span></li>
+                </ul>
+                <div class="prompt-box">
+                  <div class="prompt-box-label">Pick up my output tonight</div>
+                  <p>Ask me: <strong>"Give me the delivery PDF copy and the final complete Golf Etsy listing — title, description, and all 13 tags ready to paste in."</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card" id="d14">
+          <div class="day-header" onclick="toggleDay('d14')">
+            <div class="day-number">14</div>
+            <div class="day-title-block"><div class="day-title">Golf Suite Live + Pinterest Launch Pins</div><div class="day-time">2 hrs · both tracks</div></div>
+            <div class="day-tags"><span class="tag tag-etsy">Etsy</span><span class="tag tag-pinterest">Pinterest</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Publish Golf listing using my listing copy. Upload all mockup images. Attach delivery PDF. Set price $12.99. Hit publish.</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Create 6 Pinterest pins for the Golf listing — link each directly to the specific Etsy listing, not your shop homepage</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Schedule 6 pins across the next 6 days — 1 per day at 7–8pm using Pinterest native scheduler</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Create 1 Idea Pin: "Golf Birthday Party — the aesthetic version moms actually want" — styled party images leading to your printables as the solution</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing 6 Pinterest pin captions for the Golf listing — keyword-rich, varied so no two say the same thing</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing the Idea Pin frame-by-frame script — what text overlays go on each frame, what call to action ends it</span></li>
+                </ul>
+                <div class="prompt-box">
+                  <div class="prompt-box-label">Pick up my output tonight</div>
+                  <p>Ask me: <strong>"Give me 6 Pinterest pin captions for the Golf listing and the Idea Pin frame-by-frame script."</strong></p>
+                </div>
+              </div>
+            </div>
+            <div class="milestone-box"><strong>Week 2 milestone:</strong> First suite live on Etsy and indexed. Pinterest traffic starting. Golf listing visible to buyers. <strong>Suite 1 of 6 done.</strong></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- WEEK 3 -->
+    <div class="week-panel" id="w3">
+      <div class="week-header">
+        <div class="week-eyebrow">Week 3 · Days 15–21</div>
+        <div class="week-title">Race Cars + Western Builds</div>
+        <div class="week-desc">Build and list both remaining suites while Golf pins build momentum on Pinterest. You now have a process — each suite goes faster than the last.</div>
+      </div>
+      <div class="progress-wrap">
+        <span class="progress-label">Week 3 progress</span>
+        <div class="progress-bar-wrap"><div class="progress-bar" id="bar-w3" style="width:0%"></div></div>
+        <span class="progress-pct" id="pct-w3">0%</span>
+      </div>
+      <div class="trend-card">
+        <div class="trend-eyebrow">Trend Pulse · Week 3 · Send on Day 15</div>
+        <div class="trend-title">Etsy Search Velocity + Pinterest Trend Watch</div>
+        <div class="trend-desc">Three weeks in, both platforms have new data worth reading. Send this at the start of Day 15.</div>
+        <div class="trend-prompt-label">Copy and send this to me on Day 15</div>
+        <div class="trend-prompt">"Check Pinterest Trends for my core keywords: 'boy birthday party,' 'birthday party printables,' 'kids party themes.' What is trending upward right now that I have not yet designed? Also scan Etsy for any new party printable themes gaining traction in the last 30 days — look for listings with high favorites but low review counts, which signals fresh demand. Finally, are there any seasonal or cultural moments peaking in the next 6–8 weeks where I should already have a suite listed to catch the traffic wave?"</div>
+      </div>
+      <div class="days-grid">
+
+        <div class="day-card" id="d15">
+          <div class="day-header" onclick="toggleDay('d15')">
+            <div class="day-number">15</div>
+            <div class="day-title-block"><div class="day-title">Race Cars — Illustrations + Invitation</div><div class="day-time">2.5 hrs · both tracks</div></div>
+            <div class="day-tags"><span class="tag tag-design">Design</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Send me the Week 3 Trend Pulse prompt before opening Canva</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Run Race Cars Dream Lab prompts — vintage retro direction, muted terracotta and cream. You are designing for the mom's eye, not the toy aisle</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Build invitation. You have done this once — it goes significantly faster now</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Check Pinterest and Etsy analytics from your Golf listing — any views, favorites, or outbound clicks yet?</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Running Week 3 Trend Pulse — Pinterest velocity and new Etsy demand scan</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing all Race Cars suite copy: invitation wording, welcome sign text, food tent pun names finalized, thank you card variants</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing the complete Race Cars Etsy listing: title, description, all 13 tags</span></li>
+                </ul>
+                <div class="prompt-box">
+                  <div class="prompt-box-label">Pick up my output tonight</div>
+                  <p>Ask me: <strong>"What did the Week 3 Trend Pulse find? And give me all Race Cars suite copy — invitation wording, food tent names, and the full Etsy listing."</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card" id="d16">
+          <div class="day-header" onclick="toggleDay('d16')">
+            <div class="day-number">16</div>
+            <div class="day-title-block"><div class="day-title">Race Cars — Complete Suite + Mockups</div><div class="day-time">2.5 hrs · design</div></div>
+            <div class="day-tags"><span class="tag tag-design">Design</span><span class="tag tag-etsy">Etsy</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Complete all remaining Race Cars assets: thank you card, welcome sign, food tents (8), table numbers, cupcake toppers (12), favor tags, water labels, banner letters, activity placemat, instruction card</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Create 8–10 mockup images. Style with vintage race props — checkered accents, terracotta tones, retro feel</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Assemble delivery PDF with all template links. Quality check every single link</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing Race Cars placemat content: word search list, activity instructions, text labels</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing 6 Pinterest pin captions for the Race Cars listing and the Idea Pin frame script</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card" id="d17">
+          <div class="day-header" onclick="toggleDay('d17')">
+            <div class="day-number">17</div>
+            <div class="day-title-block"><div class="day-title">Race Cars Live + Western Build Start</div><div class="day-time">2.5 hrs · both tracks</div></div>
+            <div class="day-tags"><span class="tag tag-etsy">Etsy</span><span class="tag tag-design">Design</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Publish Race Cars listing using my copy. Schedule 6 Pinterest pins across the next 6 days</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Cross-reference listings in each other's descriptions: "Also love our Golf Birthday suite" in Race Cars, vice versa</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Open Canva and begin Western suite — run all Western Dream Lab prompts. Modern elevated western, warm tan and rust, not clip art cowboys</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Build Western invitation and welcome sign while the momentum is there</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing all Western suite copy: invitation wording, welcome sign options, food tent names, thank you card variants</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing the complete Western Etsy listing: title, description, 13 tags</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Researching Pinterest group boards in the birthday party niche — which accept contributor pins and have 10k+ followers</span></li>
+                </ul>
+                <div class="prompt-box">
+                  <div class="prompt-box-label">Pick up my output tonight</div>
+                  <p>Ask me: <strong>"Give me all Western suite copy and the full Etsy listing. Also share the Pinterest group board research."</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card" id="d18">
+          <div class="day-header" onclick="toggleDay('d18')">
+            <div class="day-number">18</div>
+            <div class="day-title-block"><div class="day-title">Western — Complete Suite + Mockups</div><div class="day-time">2.5 hrs · design</div></div>
+            <div class="day-tags"><span class="tag tag-design">Design</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Complete all remaining Western assets using your established process — food tents, table numbers, cupcake toppers, favor tags, water labels, banner letters, placemat, instruction card</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Create 8–10 Western mockup images. Style with warm earthy props — burlap texture, terracotta accents, rustic wood</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Assemble delivery PDF. Quality check every template link</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing Western placemat content: cowboy word search list, lasso activity, text labels</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing 6 Pinterest pin captions for Western and the Idea Pin frame script</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing the group board outreach message — warm and genuine, not copy-paste sounding</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card" id="d19">
+          <div class="day-header" onclick="toggleDay('d19')">
+            <div class="day-number">19</div>
+            <div class="day-title-block"><div class="day-title">Western Live + Amazon Affiliate Batch</div><div class="day-time">2 hrs · both tracks</div></div>
+            <div class="day-tags"><span class="tag tag-etsy">Etsy</span><span class="tag tag-amazon">Amazon</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Publish Western listing. Schedule 6 Pinterest pins. Cross-reference all three listings in each other's descriptions</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Create Etsy Shop Sections: "Golf Birthday," "Race Car Birthday," "Western Birthday" — assign each listing</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Generate 5 new Amazon affiliate links for coordinating party supplies across all three themes. Create and schedule 5 more affiliate pins</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Request to join 2–3 group boards using my outreach message</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing 5 Amazon affiliate pin captions for the new products</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing your Etsy FAQ page content — the 5 most common questions party printable buyers ask before purchasing</span></li>
+                </ul>
+                <div class="prompt-box">
+                  <div class="prompt-box-label">Pick up my output tonight</div>
+                  <p>Ask me: <strong>"Give me 5 Amazon affiliate pin captions and write the Etsy FAQ page content for my shop."</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card" id="d20">
+          <div class="day-header" onclick="toggleDay('d20')">
+            <div class="day-number">20</div>
+            <div class="day-title-block"><div class="day-title">Pinterest Batch + Idea Pins</div><div class="day-time">2.5 hrs · both tracks</div></div>
+            <div class="day-tags"><span class="tag tag-pinterest">Pinterest</span><span class="tag tag-content">Content</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Batch create 15 additional pins across all three suites using your 3 pin templates</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Create 1 Idea Pin for Race Cars, 1 for Western using the frame scripts I deliver</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Create 1 video pin — screen-record the Canva editing process showing how easy customization is. Proven conversion driver</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Schedule all 15 pins and 2 Idea Pins across the next 8 days</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing 15 pin captions with full keyword rotation — no two descriptions across the same listing saying the same thing</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Delivering Race Cars and Western Idea Pin frame scripts</span></li>
+                </ul>
+                <div class="prompt-box">
+                  <div class="prompt-box-label">Pick up my output tonight</div>
+                  <p>Ask me: <strong>"Give me 15 Pinterest pin captions across all three suites, plus the Idea Pin scripts for Race Cars and Western."</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card" id="d21">
+          <div class="day-header" onclick="toggleDay('d21')">
+            <div class="day-number">21</div>
+            <div class="day-title-block"><div class="day-title">Week 3 Analytics + Month 2 Confirmation</div><div class="day-time">2 hrs · both tracks</div></div>
+            <div class="day-tags"><span class="tag tag-research">Research</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Pull Pinterest analytics: impressions, outbound clicks per pin, top-performing pin format</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Pull Etsy stats: views per listing, favorites per listing, any conversions</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Review the three Month 2 briefs (Dinosaurs, Space, Camping) — confirm direction before building starts next month</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Interpreting your analytics — which pin style is working, which listing is getting most favorites, what to adjust going into Month 2</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Recommending the confirmed Month 2 build order based on Trend Pulse findings plus your early analytics signal</span></li>
+                </ul>
+                <div class="prompt-box">
+                  <div class="prompt-box-label">Pick up my output tonight</div>
+                  <p>Ask me: <strong>"Here are my Week 3 numbers — [share Pinterest impressions and Etsy views/favorites]. What does this mean and what is the confirmed Month 2 build order?"</strong></p>
+                </div>
+              </div>
+            </div>
+            <div class="milestone-box"><strong>Week 3 milestone:</strong> Three suites live on Etsy and indexed. 40+ Pinterest pins scheduled and running. Amazon affiliate active. Month 2 briefs complete. <strong>You have a real catalog and a real system.</strong></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- WEEK 4 -->
+    <div class="week-panel" id="w4">
+      <div class="week-header">
+        <div class="week-eyebrow">Week 4 · Days 22–30</div>
+        <div class="week-title">Systems, Scale + Month 2 Ready</div>
+        <div class="week-desc">Your three launch suites are live. Week 4 embeds the operating rhythm that makes this sustainable — the Trend Pulse habit, the monthly content batch, and the analytics review system that runs every month going forward.</div>
+      </div>
+      <div class="progress-wrap">
+        <span class="progress-label">Week 4 progress</span>
+        <div class="progress-bar-wrap"><div class="progress-bar" id="bar-w4" style="width:0%"></div></div>
+        <span class="progress-pct" id="pct-w4">0%</span>
+      </div>
+      <div class="trend-card">
+        <div class="trend-eyebrow">Trend Pulse · Week 4 · Send on Day 22</div>
+        <div class="trend-title">Month 2 Validation + Bachelorette Category Scope</div>
+        <div class="trend-desc">This prompt locks in your Month 2 roadmap and begins scoping bachelorette as a higher-price-point expansion for Month 3.</div>
+        <div class="trend-prompt-label">Copy and send this to me on Day 22</div>
+        <div class="trend-prompt">"Validate my Month 2 theme candidates: Dinosaurs (botanical illustrated), Space (editorial NASA-feel), and Camping/Outdoors (modern elevated). For each: what does the Etsy market currently look like, is there a clear design quality gap at the top of search, what are the strongest keywords, and what price point do the best listings command? Also scope the bachelorette printables category: what are the top suite types selling right now, what price points do they hit, what does the design landscape look like, and is there a clear lane for an elevated aesthetic shop? Tell me whether I should add a bachelorette suite in Month 3 and what the design direction should be."</div>
+      </div>
+      <div class="days-grid">
+
+        <div class="day-card" id="d22">
+          <div class="day-header" onclick="toggleDay('d22')">
+            <div class="day-number">22</div>
+            <div class="day-title-block"><div class="day-title">Pinterest Batch — 20 Pins for Next 10 Days</div><div class="day-time">3 hrs · both tracks</div></div>
+            <div class="day-tags"><span class="tag tag-pinterest">Pinterest</span><span class="tag tag-content">Content</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Send me the Week 4 Trend Pulse prompt, then open Canva</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Batch create 20 pins using your 3 Canva templates — 8 product pins (link to Etsy listings), 6 styled inspiration pins (link to Etsy shop), 6 Amazon affiliate pins</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Schedule all 20 across the next 10 days at 2 per day — Pinterest runs on autopilot for 10 full days</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Running Week 4 Trend Pulse — Month 2 validation and bachelorette category scan</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing all 20 pin captions with keyword rotation — varied so no two pins across the same listing repeat the same wording</span></li>
+                </ul>
+                <div class="prompt-box">
+                  <div class="prompt-box-label">Pick up my output tonight</div>
+                  <p>Ask me: <strong>"Give me all 20 Pinterest pin captions — 8 product, 6 inspiration, 6 Amazon affiliate — keywords rotated throughout."</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card" id="d23">
+          <div class="day-header" onclick="toggleDay('d23')">
+            <div class="day-number">23</div>
+            <div class="day-title-block"><div class="day-title">Etsy Shop Optimization + Review Push</div><div class="day-time">1.5 hrs · both tracks</div></div>
+            <div class="day-tags"><span class="tag tag-etsy">Etsy</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Enable Etsy offsite ads — Etsy promotes your listings on Google at no upfront cost, taking 15% only when a sale results</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>If anyone has purchased — send a personal message thanking them and asking for a review using my wording</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Search your own keywords on Etsy — do your listings appear? If not, your tags need adjusting</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Deliver the Week 4 Trend Pulse findings — share what you found about Month 2 and bachelorette</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing the review request message — exact wording that feels genuine, not automated</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Delivering the Week 4 Trend Pulse findings on Month 2 themes and bachelorette landscape</span></li>
+                </ul>
+                <div class="prompt-box">
+                  <div class="prompt-box-label">Pick up my output tonight</div>
+                  <p>Ask me: <strong>"Give me the review request message and share the full Week 4 Trend Pulse findings."</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card" id="d24">
+          <div class="day-header" onclick="toggleDay('d24')">
+            <div class="day-number">24</div>
+            <div class="day-title-block"><div class="day-title">Month 2 Brief Confirmation + Dinosaurs Preview</div><div class="day-time">2 hrs · both tracks</div></div>
+            <div class="day-tags"><span class="tag tag-design">Design</span><span class="tag tag-research">Research</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Test Dinosaurs in Dream Lab: "botanical illustrated dinosaur, sage green and terracotta, watercolor, children's birthday, white background, modern not cartoon"</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Save strong results to your Dinosaurs folder. Does the aesthetic feel genuinely different from what you saw on Etsy? If not, iterate the prompts</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Review all three Month 2 briefs — confirm the build order before Month 2 begins in 6 days</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Delivering the complete Dinosaurs suite brief — palette, fonts, refined Dream Lab prompts, food tent pun names ("Dino Dig Snacks," "T-Rex Treats," "Fossil Fuel Fries," "Prehistoric Picks," "Raptor Rolls," "Brachiosaurus Bites," "Triceratops Treats," "Pterodactyl Pastries")</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing a 6-month Trend Pulse calendar — when to send each prompt, what cultural moments to watch for, which themes to have ready by which month</span></li>
+                </ul>
+                <div class="prompt-box">
+                  <div class="prompt-box-label">Pick up my output tonight</div>
+                  <p>Ask me: <strong>"Give me the complete Dinosaurs suite brief and the 6-month Trend Pulse calendar."</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card" id="d25">
+          <div class="day-header" onclick="toggleDay('d25')">
+            <div class="day-number">25</div>
+            <div class="day-title-block"><div class="day-title">Monthly Operating Rhythm Setup</div><div class="day-time">1.5 hrs · both tracks</div></div>
+            <div class="day-tags"><span class="tag tag-content">Content</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Write your monthly rhythm in a Google Doc. Week 1 = design new suite + send Pre-Design Brief prompt to me. Week 2 = list it, launch Pinterest pins, send Launch Copy Package prompt. Week 3 = batch content. Week 4 = analytics + Trend Pulse + next month plan</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Block one Sunday afternoon per month as batch day — 3 hours produces a full month of scheduled content</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Set a recurring calendar reminder: last Sunday of every month = send monthly Forward Trend Scan prompt to Claude</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Write your revenue goals down: Month 2 first sale, Month 3 $100, Month 6 $500/mo. Accountable now</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing your first Etsy blog post: "10 Boy Birthday Party Themes Moms Actually Love" — 500 words, keyword-rich, natural links to all three live listings woven throughout</span></li>
+                </ul>
+                <div class="prompt-box">
+                  <div class="prompt-box-label">Pick up my output tonight</div>
+                  <p>Ask me: <strong>"Write my first Etsy blog post — '10 Boy Birthday Themes Moms Actually Love' — 500 words, keyword-rich, with my three listings linked naturally throughout."</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card" id="d26">
+          <div class="day-header" onclick="toggleDay('d26')">
+            <div class="day-number">26</div>
+            <div class="day-title-block"><div class="day-title">Blog Live + Group Board Outreach</div><div class="day-time">1.5 hrs · both tracks</div></div>
+            <div class="day-tags"><span class="tag tag-content">Content</span><span class="tag tag-pinterest">Pinterest</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Enable Etsy Blog in Shop Manager > Marketing > Blog. Publish the post I wrote. Add your suite mockup images as visuals throughout</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Pin the blog post on Pinterest as an article pin — drives traffic via both Google and Pinterest search simultaneously</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Follow up on group board requests from Day 19. If accepted, add 3 pins to each board immediately</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Repin 15 non-competitor pins across your boards to keep them active</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing the Pinterest article pin caption for the blog post</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Completing the Space suite brief (Month 2 suite 2) — fully written and waiting</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Completing the Camping/Outdoors suite brief (Month 2 suite 3) — fully written and waiting</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card" id="d27">
+          <div class="day-header" onclick="toggleDay('d27')">
+            <div class="day-number">27</div>
+            <div class="day-title-block"><div class="day-title">Second Blog Post + Final Batch</div><div class="day-time">2 hrs · both tracks</div></div>
+            <div class="day-tags"><span class="tag tag-content">Content</span><span class="tag tag-pinterest">Pinterest</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Publish blog post 2 from my track. Add mockup images. Pin it as an article pin</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Create a final batch of 10 Pinterest pins covering all three suites and schedule them</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Your Pinterest queue is now loaded well into Month 2 — the account does not go quiet when life gets busy</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing blog post 2: "How to Plan an Aesthetic Boy Birthday Party Without Losing Your Mind" — 500 words, natural product links, shareable tone</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing 10 final batch Pinterest pin captions</span></li>
+                </ul>
+                <div class="prompt-box">
+                  <div class="prompt-box-label">Pick up my output tonight</div>
+                  <p>Ask me: <strong>"Give me blog post 2 and 10 Pinterest pin captions for my final batch."</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card" id="d28">
+          <div class="day-header" onclick="toggleDay('d28')">
+            <div class="day-number">28</div>
+            <div class="day-title-block"><div class="day-title">Dinosaurs Preview + Month 2 Locked</div><div class="day-time">2 hrs · both tracks</div></div>
+            <div class="day-tags"><span class="tag tag-design">Design</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Begin Dinosaurs invitation in Canva — just the invitation today. Confirm the botanical aesthetic reads clearly different from anything on Etsy before committing to the full suite</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Confirm all three Month 2 briefs are saved and ready. You start the full Dinosaurs build on Day 31</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>All three Month 2 briefs complete and delivered: Dinosaurs, Space, Camping. Your Month 2 is as prepped as Month 1 was on Day 7.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card" id="d29">
+          <div class="day-header" onclick="toggleDay('d29')">
+            <div class="day-number">29</div>
+            <div class="day-title-block"><div class="day-title">Full 30-Day Analytics Review</div><div class="day-time">2 hrs · both tracks</div></div>
+            <div class="day-tags"><span class="tag tag-research">Research</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Pull Pinterest: total monthly impressions, top 5 pins by outbound click, follower count vs Day 1</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Pull Etsy: views per listing, favorites per listing, conversion rate, total revenue</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Pull Amazon Associates: total clicks, commissions earned</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Write your own Month 1 summary — 3 things that worked, 1 thing to stop, 3 things to do more of in Month 2</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Interpreting your analytics — not just numbers but specific actions: what to double, what to cut, what to change in Month 2</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing your Month 2 action plan based entirely on what the data shows</span></li>
+                </ul>
+                <div class="prompt-box">
+                  <div class="prompt-box-label">Pick up my output tonight</div>
+                  <p>Ask me: <strong>"Here are my 30-day numbers — [share all figures]. Tell me what is working, what is not, and write my Month 2 action plan based on the data."</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+✓</span><span>Writing your Month 2 action plan based entirely on what the data shows — no guessing</span></li>
+                </ul>
+                <div class="prompt-box">
+                  <div class="prompt-box-label">Pick up my output tonight</div>
+                  <p>Ask me: <strong>"Here are my 30-day numbers — [share all figures]. Tell me what this means, what is working, what is not, and write my Month 2 action plan."</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-card" id="d30">
+          <div class="day-header" onclick="toggleDay('d30')">
+            <div class="day-number">30</div>
+            <div class="day-title-block"><div class="day-title">Day 30 — Look at What You Built</div><div class="day-time">1 hr</div></div>
+            <div class="day-tags"><span class="tag tag-etsy">Etsy</span><span class="tag tag-pinterest">Pinterest</span></div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="day-body">
+            <div class="dual-track">
+              <div class="track track-you">
+                <div class="track-header"><div class="track-icon track-you">Y</div><div class="track-label track-you">Your Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>3 polished Etsy suites live — Golf, Race Cars, Western — all indexed and visible to buyers</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>50+ Pinterest pins scheduled and running on autopilot across 6 boards</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Amazon affiliate pins live as a parallel income stream</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Month 2 briefs written and ready: Dinosaurs, Space, Camping</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Trend Pulse system embedded into your monthly calendar</span></li>
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>A monthly operating rhythm that makes this sustainable alongside real life</span></li>
+                </ul>
+              </div>
+              <div class="track track-me">
+                <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
+                <ul class="task-list">
+                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>I am here whenever you need me. Trend Pulse prompts, design briefs, listing copy, pin captions, analytics interpretation — all on demand. Just send the prompt.</span></li>
+                </ul>
+                <div class="prompt-box">
+                  <div class="prompt-box-label">Standing prompt — use any month</div>
+                  <p><strong>"Run a Trend Pulse for [month] — what cultural moments, seasonal peaks, or emerging themes should I be designing for right now to stay 6–8 weeks ahead of peak search volume?"</strong></p>
+                </div>
+              </div>
+            </div>
+            <div class="milestone-box"><strong>Day 30:</strong> Most people researching this never start. You designed three real products, built a Pinterest presence, created a content system, and embedded a trend-watching habit — in 30 days, around a full life. <strong>Month 2 is just doing more of it. Keep going.</strong></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TREND PULSE LIBRARY -->
+    <div class="week-panel" id="prompts">
+      <div class="week-header">
+        <div class="week-eyebrow">Standing Prompts</div>
+        <div class="week-title">Your Trend Pulse Library</div>
+        <div class="week-desc">These prompts are designed to run on a schedule. Each one pulls forward intelligence — not what is popular now, but what will peak in 6–8 weeks when your suite is designed, listed, and indexed.</div>
+      </div>
+      <div class="ref-grid">
+        <div class="ref-card">
+          <div class="ref-cat">Monthly · Last Sunday of Every Month</div>
+          <div class="ref-name">Forward Trend Scan</div>
+          <div class="ref-desc" style="font-style:italic;margin-top:8px;line-height:1.7">"Run a forward trend scan for my Etsy party printables shop. Look 60–90 days ahead: what cultural moments, seasonal peaks, TV or movie releases, sporting events, or viral social trends will create demand for party themes I could design now? For each opportunity: what is the moment, when does search peak, is there a licensing risk, what does current Etsy supply look like? Prioritize gaps where elevated design is missing and there is no licensing issue."</div>
+          <div class="ref-note">Set a recurring calendar reminder: last Sunday of every month.</div>
+        </div>
+        <div class="ref-card">
+          <div class="ref-cat">Quarterly · Start of Each Season</div>
+          <div class="ref-name">Seasonal Deep Dive</div>
+          <div class="ref-desc" style="font-style:italic;margin-top:8px;line-height:1.7">"Run a seasonal deep dive for [Fall / Holiday / Spring / Summer]. What birthday and party themes peak in this season, what does Pinterest and Etsy search volume look like, what is the ideal design and list date to catch peak traffic, and what themes are underserved this season specifically? Give me a priority-ordered list of what to design first."</div>
+          <div class="ref-note">Run: late August (fall), late October (holiday), late January (spring), late April (summer).</div>
+        </div>
+        <div class="ref-card">
+          <div class="ref-cat">As Needed · When Something Goes Viral</div>
+          <div class="ref-name">Rapid Trend Validation</div>
+          <div class="ref-desc" style="font-style:italic;margin-top:8px;line-height:1.7">"[Name of trend] is gaining momentum right now. Can I build a party printable suite around it? Check: licensing risk, Etsy market right now (how many listings, what quality), what my design differentiation would be, and if I start designing today how long do I have before the market saturates? Give me a go or no-go recommendation with reasoning."</div>
+          <div class="ref-note">Use any time something catches your eye — a show, a song, a cultural moment, a meme with party potential.</div>
+        </div>
+        <div class="ref-card">
+          <div class="ref-cat">Monthly · End of Every Month</div>
+          <div class="ref-name">Data to Action</div>
+          <div class="ref-desc" style="font-style:italic;margin-top:8px;line-height:1.7">"Here are my numbers for this month: [Pinterest impressions, top pins by click, Etsy views per listing, favorites, conversions, Amazon affiliate clicks and commission]. Tell me what this data means, which suite is showing the most signal, what my Pinterest content mix should shift toward, and what I should build or change next month based purely on what the numbers say."</div>
+          <div class="ref-note">Run alongside your monthly analytics review. Numbers without interpretation are just noise.</div>
+        </div>
+        <div class="ref-card">
+          <div class="ref-cat">Before Every New Suite</div>
+          <div class="ref-name">Pre-Design Competitive Brief</div>
+          <div class="ref-desc" style="font-style:italic;margin-top:8px;line-height:1.7">"I am about to design a [theme] birthday party printable suite. Before I open Canva: scan Etsy for the current competitive landscape, identify the top 5 sellers by review count and their specific weaknesses, tell me the exact design differentiation I should pursue, write my full design brief (palette, fonts, mood, asset list with dimensions), and give me 8 Dream Lab prompts engineered to produce the aesthetic you are describing."</div>
+          <div class="ref-note">Run the week before you start any new suite. Replaces all the Day 5–6 research work from Month 1.</div>
+        </div>
+        <div class="ref-card">
+          <div class="ref-cat">When a Suite Goes Live</div>
+          <div class="ref-name">Launch Copy Package</div>
+          <div class="ref-desc" style="font-style:italic;margin-top:8px;line-height:1.7">"My [theme] birthday suite is going live today. Write me the complete launch package: full Etsy listing (title, description, all 13 tags), 8 Pinterest pin captions with keyword rotation, the Idea Pin frame-by-frame script, and a review request message to send buyers after purchase."</div>
+          <div class="ref-note">Run the day you finish a suite. Get all copy in one session, paste it in, publish.</div>
+        </div>
+      </div>
+
+      <div class="section-title">The Trend Pulse Timeline</div>
+      <div class="section-sub">The goal is always to be designing 6–8 weeks before a theme peaks on Pinterest and Etsy search.</div>
+      <div class="strategy-grid">
+        <div class="strat-card">
+          <div class="strat-icon">👁️</div>
+          <div class="strat-title">Week 8 Before Peak</div>
+          <div class="strat-body">Trend Pulse identifies the opportunity. You confirm interest and run the Pre-Design Competitive Brief. No designing yet — just flagging and planning the brief.</div>
+        </div>
+        <div class="strat-card">
+          <div class="strat-icon">🎨</div>
+          <div class="strat-title">Weeks 5–6 Before Peak</div>
+          <div class="strat-body">Design the suite. List it on Etsy. Launch Pinterest pins using the Launch Copy Package. Etsy needs time to index — the earlier you list, the more authority you have when search spikes.</div>
+        </div>
+        <div class="strat-card">
+          <div class="strat-icon">📌</div>
+          <div class="strat-title">Weeks 2–4 Before Peak</div>
+          <div class="strat-body">Pinterest content in full swing. Your listing has favorites and possibly reviews. You are at the top of search when competitors are just starting to list. This is the window that compounds.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- THEME CATALOG -->
+    <div class="week-panel" id="themes">
+      <div class="week-header">
+        <div class="week-eyebrow">Full Catalog</div>
+        <div class="week-title">Theme Roadmap — Month 1 Through Month 6+</div>
+        <div class="week-desc">Every suite compounds the ones before it. Build order is based on market gap, Pinterest demand, licensing risk, and Trend Pulse findings. Confirm with a Pre-Design Brief before starting each one.</div>
+      </div>
+      <table>
+        <tr><th>Month</th><th>Theme</th><th>Type</th><th>Design Direction</th><th>Why This Order</th></tr>
+        <tr><td>Month 1</td><td>Golf "Hole in One"</td><td>Trending + evergreen</td><td>Sage + cream, watercolor golf illustrations, elegant serif</td><td>Clear design gap confirmed in research. Your original instinct was right.</td></tr>
+        <tr><td>Month 1</td><td>Race Cars "Two Fast"</td><td>Trending 2026</td><td>Muted terracotta + cream, retro/vintage poster feel</td><td>Trending hard in 2026. The retro muted palette version does not exist yet.</td></tr>
+        <tr><td>Month 1</td><td>Western "How The West Was One"</td><td>Trending + evergreen</td><td>Warm tan + rust + cream, modern elevated western</td><td>Viral Pinterest phrase. Etsy aesthetic years behind the cultural moment.</td></tr>
+        <tr><td>Month 2</td><td>Dinosaurs (botanical)</td><td>Evergreen core</td><td>Sage + terracotta, botanical illustration, not cartoon</td><td>Massive year-round search volume. Design quality gap confirmed.</td></tr>
+        <tr><td>Month 2</td><td>Space / Astronaut</td><td>Evergreen core</td><td>Deep navy + warm gold, editorial NASA feel</td><td>Consistent demand. Current Etsy supply is neon and dated.</td></tr>
+        <tr><td>Month 3</td><td>Camping / Outdoors</td><td>Evergreen core</td><td>Forest green + flannel tan, modern outdoorsy</td><td>Severely underserved. Nobody has done elevated camping printables.</td></tr>
+        <tr><td>Month 3</td><td>Bachelorette (TBD style)</td><td>High-value vertical</td><td>Based on Trend Pulse Week 4 findings</td><td>Higher price point $18–25. Different buyer, lower competition than kids themes.</td></tr>
+        <tr><td>Month 4</td><td>All Star Sports</td><td>Evergreen broad</td><td>Navy + red + cream, editorial clean, sport-neutral</td><td>Every kid plays something. One listing serves all sports parents year-round.</td></tr>
+        <tr><td>Month 4</td><td>Trend Drop (TBD)</td><td>Fast follow</td><td>Based on Trend Pulse at Month 3</td><td>Move in week one of a trend. One weekend to design. Ride the wave.</td></tr>
+        <tr><td>Month 5</td><td>Jungle / Safari (elevated)</td><td>Evergreen</td><td>Earthy botanical, minimal, not clip art animals</td><td>High search volume. Existing designs are generic. The elevated version is missing.</td></tr>
+        <tr><td>Month 5+</td><td>Printify physical products</td><td>Revenue extension</td><td>Coordinate to existing suite palettes</td><td>Add once Etsy data confirms which themes sell. No guessing required.</td></tr>
+      </table>
+
+      <div class="section-title">How to Think About Your Catalog</div>
+      <div class="strategy-grid">
+        <div class="strat-card">
+          <div class="strat-icon">🌿</div>
+          <div class="strat-title">Evergreen Suites</div>
+          <div class="strat-body">Dinosaurs, Space, Camping, Sports. Sell every single day regardless of trends. Kids have birthdays year-round. Build these for stable baseline income that compounds with every review.</div>
+        </div>
+        <div class="strat-card">
+          <div class="strat-icon">📈</div>
+          <div class="strat-title">Trending Suites</div>
+          <div class="strat-body">Golf, Race Cars, Western. Riding a trend means faster early traction and first reviews. Move within the first month of a trend — not after everyone else has listed and the search rankings are locked.</div>
+        </div>
+        <div class="strat-card">
+          <div class="strat-icon">⚡</div>
+          <div class="strat-title">Trend Drops</div>
+          <div class="strat-body">Fast-follow cultural moments — a show, a viral phrase, a seasonal spike. One weekend to design, list within 48 hours, capture the wave or move on. The Trend Pulse system is what finds these early.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INCOME -->
+    <div class="week-panel" id="income">
+      <div class="week-header">
+        <div class="week-eyebrow">Strategy</div>
+        <div class="week-title">Income Stack + Realistic Timeline</div>
+        <div class="week-desc">Four revenue layers building on each other. Etsy digital downloads are the core engine. Everything else amplifies or extends it.</div>
+      </div>
+      <table>
+        <tr><th>Stream</th><th>Start</th><th>Effort Model</th><th>Margin</th><th>Notes</th></tr>
+        <tr><td>Etsy digital downloads</td><td>Month 1</td><td>Design once, sell forever</td><td>~93%</td><td>Primary engine. Every suite compounds all previous ones.</td></tr>
+        <tr><td>Amazon affiliate via Pinterest</td><td>Week 1</td><td>Pin creation only</td><td>3–4% commission</td><td>Parallel earner from Day 3. Also validates which products your audience buys before you stock them.</td></tr>
+        <tr><td>Printify physical on Etsy</td><td>Month 3+</td><td>Low once designs exist</td><td>40–60%</td><td>Add coordinating physical items once Etsy data tells you which themes sell best.</td></tr>
+        <tr><td>Shopify party supply bundles</td><td>Month 5+</td><td>Medium setup</td><td>40–60%</td><td>Source AliExpress tableware to match your suite palettes. Sell as curated kits. Your Pinterest audience becomes Shopify customers.</td></tr>
+      </table>
+
+      <div class="section-title">Realistic Revenue Timeline</div>
+      <div class="section-sub">Etsy growth is slow then sudden. Reviews are the accelerant. The Trend Pulse system is what keeps you ahead and compounds faster than sellers who are just reacting.</div>
+      <table>
+        <tr><th>Month</th><th>Suites Live</th><th>Etsy Est.</th><th>Amazon Affiliate</th><th>What Drives Growth</th></tr>
+        <tr><td>Month 1</td><td>3</td><td>$0–$30</td><td>$0–$10</td><td>Getting indexed. First views. Pinterest seeding audience.</td></tr>
+        <tr><td>Month 2</td><td>5</td><td>$30–$120</td><td>$10–$30</td><td>First reviews appear. Etsy algorithm starts surfacing your shop.</td></tr>
+        <tr><td>Month 3</td><td>7</td><td>$100–$350</td><td>$20–$60</td><td>Pinterest traffic compounding. Trend Pulse drops landing ahead of demand.</td></tr>
+        <tr><td>Month 6</td><td>12+</td><td>$400–$1,000</td><td>$50–$120</td><td>Holiday season. Gift guide traffic. Established shop authority.</td></tr>
+        <tr><td>Month 12</td><td>20+</td><td>$800–$2,500+</td><td>$100–$250</td><td>Full compound effect. Every stream working together. Trend drops adding spikes on top.</td></tr>
+      </table>
+      <div class="tip-box" style="margin-top:14px"><strong>The honest truth about Month 1:</strong> You will probably not make meaningful money in the first 30 days. That is normal and expected. The work you do in Month 1 is what generates income in Month 3. The Trend Pulse system is what generates disproportionate income in Month 6 and beyond — because you are designing for demand that has not peaked yet, while everyone else is chasing it after the fact.</div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// === DYNAMIC PLAN LAYER ===
+// Persistent storage using localStorage simulation via in-memory object
+// (plan state persists within session; for true persistence user saves via export)
+
+const STATE_KEY = 'planState_v3';
+
+let planState = {
+  currentDay: 1,
+  completedDays: [],
+  skippedDays: [],
+  fastTrackMode: false,
+  pivotNotes: [],
+  dayNotes: {},
+  startDate: null,
+  signals: []
+};
+
+function saveState() {
+  try { localStorage.setItem(STATE_KEY, JSON.stringify(planState)); } catch(e) {}
+}
+
+function loadState() {
+  try {
+    const s = localStorage.getItem(STATE_KEY);
+    if (s) planState = { ...planState, ...JSON.parse(s) };
+  } catch(e) {}
+  if (!planState.startDate) {
+    planState.startDate = new Date().toISOString().split('T')[0];
+    saveState();
+  }
+}
+
+function getDaysSinceStart() {
+  if (!planState.startDate) return 0;
+  const start = new Date(planState.startDate);
+  const now = new Date();
+  return Math.floor((now - start) / (1000 * 60 * 60 * 24));
+}
+
+function getCompletedTaskCount() {
+  return document.querySelectorAll('.task-list li.done').length;
+}
+
+function getTotalTaskCount() {
+  return document.querySelectorAll('.task-list li').length;
+}
+
+function detectSignals() {
+  const signals = [];
+  const completed = planState.completedDays.length;
+  const daysSince = getDaysSinceStart();
+
+  // Fast progress signal
+  if (completed >= 3 && daysSince <= 2) {
+    signals.push({ type: 'fast', message: 'You are moving fast. Consider compressing Week 2 into 5 days instead of 7.' });
+  }
+  // Behind pace signal
+  if (daysSince >= 5 && completed < 2) {
+    signals.push({ type: 'slow', message: 'Life happened — no judgment. Tap "Replan from today" to compress the remaining days.' });
+  }
+  // Suite 1 listed early
+  if (planState.completedDays.includes(14) && daysSince < 12) {
+    signals.push({ type: 'milestone', message: 'Suite 1 live ahead of schedule. You could start the Race Cars brief today instead of Day 15.' });
+  }
+  // Pivot opportunity
+  if (planState.pivotNotes.length > 0) {
+    signals.push({ type: 'pivot', message: 'You have logged a plan note. Review it before starting today\'s session.' });
+  }
+
+  planState.signals = signals;
+  saveState();
+  return signals;
+}
+
+function renderDynamicHeader() {
+  const existing = document.getElementById('dynamic-header');
+  if (existing) existing.remove();
+
+  const signals = detectSignals();
+  const completed = planState.completedDays.length;
+  const pace = planState.fastTrackMode ? 'Fast Track' : 'Standard';
+  const daysSince = getDaysSinceStart();
+  const projectedEnd = planState.fastTrackMode ? 21 : 30;
+
+  const header = document.createElement('div');
+  header.id = 'dynamic-header';
+  header.style.cssText = 'background:#1A1A2E;border-bottom:1px solid #2C2C4E;padding:14px 28px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;';
+
+  // Status pills
+  const statusHtml = `
+    <div style="display:flex;gap:8px;flex-wrap:wrap;flex:1;align-items:center;">
+      <div style="background:#2C2C4E;border-radius:20px;padding:5px 12px;font-size:11px;color:#8FAF8F;font-weight:600;font-family:Inter,sans-serif;">
+        Day ${daysSince + 1} of ${projectedEnd} · ${pace}
+      </div>
+      <div style="background:#2C2C4E;border-radius:20px;padding:5px 12px;font-size:11px;color:#C4714A;font-weight:600;font-family:Inter,sans-serif;">
+        ${completed} days complete
+      </div>
+      ${signals.map(s => `
+        <div style="background:${s.type === 'fast' ? '#1A3A2E' : s.type === 'slow' ? '#3A1A1A' : s.type === 'milestone' ? '#1A2A3A' : '#3A1A3A'};border:1px solid ${s.type === 'fast' ? '#5C7A5C' : s.type === 'slow' ? '#7A3A3A' : s.type === 'milestone' ? '#3A5C7A' : '#7A3A7A'};border-radius:20px;padding:5px 12px;font-size:11px;color:#FAF7F2;font-family:Inter,sans-serif;cursor:pointer;" onclick="showSignalModal('${s.message.replace(/'/g,"\\'")}')">
+          ${s.type === 'fast' ? '⚡' : s.type === 'slow' ? '⏸' : s.type === 'milestone' ? '🎯' : '🔄'} ${s.message.substring(0, 45)}${s.message.length > 45 ? '...' : ''}
+        </div>
+      `).join('')}
+    </div>
+    <div style="display:flex;gap:8px;">
+      <button onclick="openReplanModal()" style="background:#C4714A;color:white;border:none;border-radius:6px;padding:7px 14px;font-size:11px;font-weight:600;cursor:pointer;font-family:Inter,sans-serif;">⟳ Replan</button>
+      <button onclick="openLogModal()" style="background:#2C2C4E;color:#B0A89A;border:none;border-radius:6px;padding:7px 14px;font-size:11px;font-weight:600;cursor:pointer;font-family:Inter,sans-serif;">✎ Log note</button>
+      <button onclick="toggleFastTrack()" style="background:${planState.fastTrackMode ? '#5C7A5C' : '#2C2C4E'};color:${planState.fastTrackMode ? 'white' : '#B0A89A'};border:none;border-radius:6px;padding:7px 14px;font-size:11px;font-weight:600;cursor:pointer;font-family:Inter,sans-serif;">⚡ Fast Track${planState.fastTrackMode ? ' ON' : ''}</button>
+    </div>
+  `;
+  header.innerHTML = statusHtml;
+
+  const statsBar = document.querySelector('.stats-bar');
+  if (statsBar) statsBar.parentNode.insertBefore(header, statsBar);
+}
+
+function toggleFastTrack() {
+  planState.fastTrackMode = !planState.fastTrackMode;
+  saveState();
+  renderDynamicHeader();
+  renderDayStatuses();
+  if (planState.fastTrackMode) {
+    showToast('⚡ Fast Track mode on — days are compressed. You can combine tasks across days.');
+  } else {
+    showToast('Standard pace restored.');
+  }
+}
+
+function openReplanModal() {
+  const modal = createModal('Replan from Today', `
+    <p style="font-size:13px;color:#6B6B6B;margin-bottom:16px;line-height:1.6;">Tell me what has changed and I will give you a revised plan for the remaining days. Be specific: are you ahead, behind, pivoting your theme, or reacting to data you have seen?</p>
+    <textarea id="replan-input" placeholder="Example: I finished Golf suite 3 days early and Pinterest is already showing 200 impressions. Race Cars brief feels less exciting now — I want to pivot to Dinosaurs as Suite 2 instead. What should the next 16 days look like?" style="width:100%;height:120px;background:#FAF7F2;border:1px solid #E8D5C4;border-radius:8px;padding:12px;font-size:12px;font-family:Inter,sans-serif;resize:vertical;color:#2C2C2C;"></textarea>
+    <div style="margin-top:12px;background:#EEF4EE;border-left:3px solid #8FAF8F;padding:10px 12px;border-radius:0 6px 6px 0;font-size:12px;color:#5C7A5C;">
+      <strong>Copy this and send to Claude in a new message:</strong><br>
+      "I am on Day [X] of my 30-day Etsy plan. Here is what has changed: [your note]. Give me a revised day-by-day plan for the remaining [Y] days, adjusting for what I have told you."
+    </div>
+    <button onclick="copyReplanPrompt()" style="margin-top:12px;background:#2C2C2C;color:white;border:none;border-radius:6px;padding:9px 16px;font-size:12px;font-weight:600;cursor:pointer;width:100%;font-family:Inter,sans-serif;">Copy replan prompt to clipboard</button>
+  `);
+  document.body.appendChild(modal);
+}
+
+function copyReplanPrompt() {
+  const input = document.getElementById('replan-input').value;
+  const daysSince = getDaysSinceStart() + 1;
+  const remaining = Math.max(0, 30 - planState.completedDays.length);
+  const prompt = `I am on Day ${daysSince} of my 30-day Etsy party printables plan. Here is what has changed:\n\n${input || '[describe what changed]'}\n\nCompleted days: ${planState.completedDays.join(', ') || 'none yet'}\nRemaining days: approximately ${remaining}\n\nGive me a revised day-by-day plan for the remaining ${remaining} days, adjusting tasks and pacing based on what I have told you. Keep the dual-track format with my tasks and your tasks clearly separated.`;
+  navigator.clipboard.writeText(prompt).then(() => {
+    showToast('Replan prompt copied — paste it into a new Claude message');
+    closeModal();
+  }).catch(() => {
+    document.getElementById('replan-input').value = prompt;
+    document.getElementById('replan-input').select();
+    showToast('Select all text in the box and copy manually');
+  });
+}
+
+function openLogModal() {
+  const modal = createModal('Log a Plan Note', `
+    <p style="font-size:12px;color:#6B6B6B;margin-bottom:12px;">Capture something you are seeing — a theme getting more Pinterest traction than expected, a supplier issue, something that might change the plan. This stays visible as a signal in the header.</p>
+    <textarea id="log-input" placeholder="Example: Golf suite got 3 favorites in first 24 hours. Pinterest impressions way higher than expected on the styled table scene pin. Might want to double down on mockup-style pins earlier than planned." style="width:100%;height:100px;background:#FAF7F2;border:1px solid #E8D5C4;border-radius:8px;padding:12px;font-size:12px;font-family:Inter,sans-serif;resize:vertical;color:#2C2C2C;"></textarea>
+    <button onclick="saveNote()" style="margin-top:12px;background:#2C2C2C;color:white;border:none;border-radius:6px;padding:9px 16px;font-size:12px;font-weight:600;cursor:pointer;width:100%;font-family:Inter,sans-serif;">Save note</button>
+  `);
+  document.body.appendChild(modal);
+}
+
+function saveNote() {
+  const note = document.getElementById('log-input').value.trim();
+  if (!note) return;
+  const entry = { text: note, date: new Date().toLocaleDateString(), day: getDaysSinceStart() + 1 };
+  planState.pivotNotes.push(entry);
+  saveState();
+  closeModal();
+  renderDynamicHeader();
+  showToast('Note saved — visible in your plan signals');
+}
+
+function showSignalModal(message) {
+  const modal = createModal('Plan Signal', `
+    <p style="font-size:13px;color:#2C2C2C;line-height:1.7;margin-bottom:16px;">${message}</p>
+    <div style="background:#FAF7F2;border:1px solid #E8D5C4;border-radius:8px;padding:12px;font-size:12px;color:#6B6B6B;line-height:1.6;">
+      If this signal means you want to adjust the plan, use the <strong>Replan</strong> button — it will generate a prompt you can send to Claude in a new message for a revised day-by-day schedule.
+    </div>
+  `);
+  document.body.appendChild(modal);
+}
+
+function createModal(title, content) {
+  const overlay = document.createElement('div');
+  overlay.id = 'modal-overlay';
+  overlay.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:1000;display:flex;align-items:center;justify-content:center;';
+  overlay.onclick = (e) => { if (e.target === overlay) closeModal(); };
+
+  overlay.innerHTML = `
+    <div style="background:white;border-radius:12px;padding:24px;max-width:520px;width:90%;max-height:80vh;overflow-y:auto;position:relative;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:600;color:#2C2C2C;">${title}</div>
+        <button onclick="closeModal()" style="background:none;border:none;font-size:20px;cursor:pointer;color:#B0A89A;line-height:1;">×</button>
+      </div>
+      ${content}
+    </div>
+  `;
+  return overlay;
+}
+
+function closeModal() {
+  const m = document.getElementById('modal-overlay');
+  if (m) m.remove();
+}
+
+function showToast(message) {
+  const existing = document.getElementById('toast');
+  if (existing) existing.remove();
+  const toast = document.createElement('div');
+  toast.id = 'toast';
+  toast.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#2C2C2C;color:white;padding:10px 20px;border-radius:8px;font-size:12px;font-family:Inter,sans-serif;z-index:2000;transition:opacity 0.3s;';
+  toast.textContent = message;
+  document.body.appendChild(toast);
+  setTimeout(() => { toast.style.opacity = '0'; setTimeout(() => toast.remove(), 300); }, 3000);
+}
+
+function renderDayStatuses() {
+  document.querySelectorAll('.day-card').forEach(card => {
+    const id = card.id;
+    const dayNum = parseInt(id.replace('d',''));
+    const existingBadge = card.querySelector('.day-status-badge');
+    if (existingBadge) existingBadge.remove();
+
+    const badge = document.createElement('div');
+    badge.className = 'day-status-badge';
+
+    if (planState.completedDays.includes(dayNum)) {
+      badge.style.cssText = 'width:18px;height:18px;border-radius:50%;background:#8FAF8F;display:flex;align-items:center;justify-content:center;font-size:10px;color:white;flex-shrink:0;';
+      badge.textContent = '✓';
+    } else if (planState.skippedDays.includes(dayNum)) {
+      badge.style.cssText = 'width:18px;height:18px;border-radius:50%;background:#B0A89A;display:flex;align-items:center;justify-content:center;font-size:9px;color:white;flex-shrink:0;';
+      badge.textContent = '→';
+    } else if (planState.fastTrackMode && dayNum > getDaysSinceStart() + 1) {
+      badge.style.cssText = 'font-size:9px;color:#C4714A;font-weight:600;font-family:Inter,sans-serif;flex-shrink:0;';
+      badge.textContent = 'FAST';
+    }
+
+    const header = card.querySelector('.day-header');
+    if (header && badge.textContent) {
+      header.appendChild(badge);
+    }
+
+    // Add Mark Complete + Skip buttons to open day cards
+    if (card.classList.contains('open')) {
+      const existingActions = card.querySelector('.day-actions');
+      if (!existingActions) {
+        const actions = document.createElement('div');
+        actions.className = 'day-actions';
+        actions.style.cssText = 'display:flex;gap:8px;padding:12px 16px;border-top:1px solid #E8D5C4;background:#FAF7F2;';
+
+        const isComplete = planState.completedDays.includes(dayNum);
+        const isSkipped = planState.skippedDays.includes(dayNum);
+
+        actions.innerHTML = `
+          <button onclick="markDayComplete(${dayNum})" style="flex:1;background:${isComplete ? '#8FAF8F' : '#2C2C2C'};color:white;border:none;border-radius:6px;padding:8px;font-size:11px;font-weight:600;cursor:pointer;font-family:Inter,sans-serif;">
+            ${isComplete ? '✓ Day Complete' : 'Mark Day Complete'}
+          </button>
+          <button onclick="skipDay(${dayNum})" style="background:${isSkipped ? '#B0A89A' : '#FAF7F2'};color:${isSkipped ? 'white' : '#6B6B6B'};border:1px solid #E8D5C4;border-radius:6px;padding:8px 12px;font-size:11px;font-weight:600;cursor:pointer;font-family:Inter,sans-serif;">
+            ${isSkipped ? 'Skipped' : 'Skip day'}
+          </button>
+          <button onclick="addDayNote(${dayNum})" style="background:#FAF7F2;color:#6B6B6B;border:1px solid #E8D5C4;border-radius:6px;padding:8px 12px;font-size:11px;cursor:pointer;font-family:Inter,sans-serif;" title="Add note to this day">✎</button>
+        `;
+
+        // Show existing note if any
+        if (planState.dayNotes[dayNum]) {
+          const noteDiv = document.createElement('div');
+          noteDiv.style.cssText = 'padding:8px 16px 12px;background:#FAF7F2;font-size:11px;color:#6B6B6B;font-style:italic;';
+          noteDiv.textContent = '📝 ' + planState.dayNotes[dayNum];
+          card.querySelector('.day-body').appendChild(noteDiv);
+        }
+
+        card.querySelector('.day-body').appendChild(actions);
+      }
+    }
+  });
+}
+
+function markDayComplete(dayNum) {
+  if (!planState.completedDays.includes(dayNum)) {
+    planState.completedDays.push(dayNum);
+    // Remove from skipped if it was there
+    planState.skippedDays = planState.skippedDays.filter(d => d !== dayNum);
+  } else {
+    // Toggle off
+    planState.completedDays = planState.completedDays.filter(d => d !== dayNum);
+  }
+  saveState();
+  renderDynamicHeader();
+  renderDayStatuses();
+  updateProgress();
+  if (planState.completedDays.includes(dayNum)) {
+    showToast(`Day ${dayNum} marked complete 🎉`);
+  }
+}
+
+function skipDay(dayNum) {
+  if (!planState.skippedDays.includes(dayNum)) {
+    planState.skippedDays.push(dayNum);
+    planState.completedDays = planState.completedDays.filter(d => d !== dayNum);
+  } else {
+    planState.skippedDays = planState.skippedDays.filter(d => d !== dayNum);
+  }
+  saveState();
+  renderDynamicHeader();
+  renderDayStatuses();
+  showToast(planState.skippedDays.includes(dayNum) ? `Day ${dayNum} skipped — plan signals will note this` : `Day ${dayNum} back in the plan`);
+}
+
+function addDayNote(dayNum) {
+  const existing = planState.dayNotes[dayNum] || '';
+  const modal = createModal(`Note for Day ${dayNum}`, `
+    <textarea id="day-note-input" placeholder="What happened today, what surprised you, what should shift..." style="width:100%;height:80px;background:#FAF7F2;border:1px solid #E8D5C4;border-radius:8px;padding:12px;font-size:12px;font-family:Inter,sans-serif;resize:vertical;color:#2C2C2C;">${existing}</textarea>
+    <button onclick="saveDayNote(${dayNum})" style="margin-top:10px;background:#2C2C2C;color:white;border:none;border-radius:6px;padding:9px 16px;font-size:12px;font-weight:600;cursor:pointer;width:100%;font-family:Inter,sans-serif;">Save</button>
+  `);
+  document.body.appendChild(modal);
+}
+
+function saveDayNote(dayNum) {
+  const note = document.getElementById('day-note-input').value.trim();
+  if (note) planState.dayNotes[dayNum] = note;
+  else delete planState.dayNotes[dayNum];
+  saveState();
+  closeModal();
+  showToast('Note saved');
+}
+
+// Override toggleDay to also render actions
+const originalToggleDay = window.toggleDay;
+window.toggleDay = function(id) {
+  originalToggleDay(id);
+  setTimeout(() => renderDayStatuses(), 50);
+};
+
+// Init
+document.addEventListener('DOMContentLoaded', () => {
+  loadState();
+  renderDynamicHeader();
+  renderDayStatuses();
+});
+
+</script>
+<script>
+function showWeek(id,btn){
+  document.querySelectorAll('.week-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.week-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+function toggleDay(id){
+  document.getElementById(id).classList.toggle('open');
+}
+function toggleTask(li){
+  li.classList.toggle('done');
+  updateProgress();
+}
+function updateProgress(){
+  const weeks={
+    'w1':['d1','d2','d3','d4','d5','d6','d7'],
+    'w2':['d8','d9','d10','d11','d12','d13','d14'],
+    'w3':['d15','d16','d17','d18','d19','d20','d21'],
+    'w4':['d22','d23','d24','d25','d26','d27','d28','d29','d30']
+  };
+  Object.entries(weeks).forEach(([week,days])=>{
+    let total=0,done=0;
+    days.forEach(d=>{
+      const card=document.getElementById(d);
+      if(!card)return;
+      card.querySelectorAll('.task-list li').forEach(li=>{
+        total++;
+        if(li.classList.contains('done'))done++;
+      });
+    });
+    const pct=total>0?Math.round((done/total)*100):0;
+    const bar=document.getElementById('bar-'+week);
+    const label=document.getElementById('pct-'+week);
+    if(bar)bar.style.width=pct+'%';
+    if(label)label.textContent=pct+'%';
+  });
+}
+</script>
+</body>
+</html>
