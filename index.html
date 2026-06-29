@@ -1824,6 +1824,8 @@ document.addEventListener('DOMContentLoaded', () => {
   loadState();
   renderDynamicHeader();
   renderDayStatuses();
+  loadTaskStates();
+  updateProgress();
 });
 
 </script>
@@ -1837,8 +1839,39 @@ function showWeek(id,btn){
 function toggleDay(id){
   document.getElementById(id).classList.toggle('open');
 }
+const TASK_KEY = 'taskState_v1';
+
+function saveTaskStates() {
+  const states = {};
+  document.querySelectorAll('.task-list li').forEach(li => {
+    const textEl = li.querySelector('span:last-child');
+    if (!textEl) return;
+    const key = textEl.textContent.trim().substring(0, 80);
+    states[key] = li.classList.contains('done');
+  });
+  try { localStorage.setItem(TASK_KEY, JSON.stringify(states)); } catch(e) {}
+}
+
+function loadTaskStates() {
+  try {
+    const s = localStorage.getItem(TASK_KEY);
+    if (!s) return;
+    const states = JSON.parse(s);
+    document.querySelectorAll('.task-list li').forEach(li => {
+      const textEl = li.querySelector('span:last-child');
+      if (!textEl) return;
+      const key = textEl.textContent.trim().substring(0, 80);
+      if (key in states) {
+        if (states[key]) li.classList.add('done');
+        else li.classList.remove('done');
+      }
+    });
+  } catch(e) {}
+}
+
 function toggleTask(li){
   li.classList.toggle('done');
+  saveTaskStates();
   updateProgress();
 }
 function updateProgress(){
