@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>30-Day Etsy Launch Plan v5</title>
+<title>ThePartyPalettDesign — 30-Day Launch Tracker</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
 *{box-sizing:border-box;margin:0;padding:0}
@@ -340,9 +340,9 @@ details.kw-detail .kw-content{padding:10px 12px;font-size:11px;color:#4A4A4A;lin
               <div class="track track-me">
                 <div class="track-header"><div class="track-icon track-me">C</div><div class="track-label track-me">My Track</div></div>
                 <ul class="task-list">
-                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing keyword-rich board descriptions for all 6 boards — ready to copy-paste directly in</span></li>
-                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Writing your Pinterest profile bio with maximum keyword density for your niche</span></li>
-                  <li onclick="toggleTask(this)"><span class="check">✓</span><span>Building master Pinterest keyword list — top 30 search phrases across your three themes from autocomplete data</span></li>
+                  <li class="done" onclick="toggleTask(this)"><span class="check">✓</span><span>Writing keyword-rich board descriptions for all 6 boards — ready to copy-paste directly in</span></li>
+                  <li class="done" onclick="toggleTask(this)"><span class="check">✓</span><span>Writing your Pinterest profile bio with maximum keyword density for your niche</span></li>
+                  <li class="done" onclick="toggleTask(this)"><span class="check">✓</span><span>Building master Pinterest keyword list — top 30 search phrases across your three themes from autocomplete data</span></li>
                 </ul>
                 <div class="prompt-box">
                   <div class="prompt-box-label">Pick up my output tonight</div>
@@ -1861,9 +1861,8 @@ function loadTaskStates() {
       const textEl = li.querySelector('span:last-child');
       if (!textEl) return;
       const key = textEl.textContent.trim().substring(0, 80);
-      if (key in states) {
-        if (states[key]) li.classList.add('done');
-        else li.classList.remove('done');
+      if (key in states && states[key]) {
+        li.classList.add('done');
       }
     });
   } catch(e) {}
